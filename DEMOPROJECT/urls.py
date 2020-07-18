@@ -18,7 +18,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls), # 127.0.0.1:8000/admin
-    path('app', include('DEMOAPP.urls')),  # 127.0.0.1:8000/app
     path('',include('weatherApp.urls')),    # as per geeks for geek - home page 127.0.0.1:8000
-    path('weather',include('weather.urls')) # other way.. will let you more once completed. 127.0.0.1:8000/weather
 ]
