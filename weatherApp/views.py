@@ -22,7 +22,7 @@ def index(request):
         try:
              source = urllib.request.urlopen(
             "http://api.openweathermap.org/data/2.5/weather?q=" + city +
-            "&appid=4cd80c1d9a852e8b859c4a09146c78b0").read()
+            "your API code").read()
         except urllib.error.HTTPError as e:
              print('HTTPError: {}'.format(e.code))
              data = {}
