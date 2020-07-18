@@ -14,7 +14,6 @@ import urllib.request
 
 #  from geeks of geekss
 def index(request):
- #   print("**************inside index method ...........request.method..."- request.method())
     if request.method == 'POST':
         city = request.POST['city']
         # source contain JSON data from API
@@ -31,11 +30,9 @@ def index(request):
              return redirect("/")
 
         else:
-            print("inside try else..................if valid city ")
 
             # converting JSON data to a dictionary
             list_of_data = json.loads(source)
-            print("*************************************- ", list_of_data)
             # data for variable list_of_data
             data = {
                 "city_name": str(list_of_data['name']),
@@ -49,12 +46,9 @@ def index(request):
             print(data)
 
     else:
-            print("inside main if else.........")
+            
             data = {}
-            print("................data - ", data)
-            print("................data - ", len(data))
-
-
+        
 
     return render(request, "index.html", data)
 
